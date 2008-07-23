@@ -2,47 +2,74 @@
 
 = Introduction =
 
-We need a general structure that allows us to go step by step, giving always the possibility to easily extend and port what we did but also to finalize the project whenever necessary.
+ We need a general structure that allows us to go step by step, giving always the possibility to easily extend and port what we did but also to finalize the project whenever necessary.
+
+ Finally we need also a common header to copy/paste into each file.. :-)
 
 = Details =
 
  We could divide the project in different _sections_:
    * I/O interface
-   * 
+   * Data interface
 
  The guideline is that each (main) section corresponds roughly to one working directory.
 
+
+= C++ Header =
+
+Just a nice try... feel free to change it :)
+
+{{{
+/* NomeFile
+Comment:
+Author: M. Antonelli, S. Pagan Griso
+/*
+
+}}}
+
+
 = I/O Interface =
 
- This section covers both graphical, text, debug output.
- A set of classes to wrap the details of the particular implementation. In my mind at the moment we need a quite high-level interface, to be able to decide/change also 2D/3D options and all this stuffs.
- I would put in this section all the classes that we use to display something, from the game to the _user_ (can also be another !TombSeller program in the future for LAN parties, will be just the graphical interface plus debug information in the beginnng).
- We need to specify in this section the guidelines for this interface in order to decide exactly at which level we want to put it; i would also specify the external resources and some detail of the current implementation of these interfaces (for this project it's useless to divide the interface and the implementations in different directories)
+ This section covers both graphical, text[, socket] and debug output, as well as keyboard/mouse inputs.
+ A set of classes to wrap the details of the particular implementation. In my mind at the moment we need a quite high-level interface.
+ I would put in this section all the classes that we use to display something, from the game from/to the _user_ (can also be another !TombSeller program in the future for LAN parties, will be just the graphical interface plus debug information in the beginnng).
+ We need to specify in this section the guidelines for this interface in order to decide exactly at which level we want to put it; i would also specify the external resources and some detail of the current implementation of these interfaces (for this project it's useless to divide the interface and the implementations in different directories).
 
 == Interface design ==
 
+ Here we need a simple common _message handler_ to be able to enqueue commands and requests, as well as to store inputs until the program is ready to get them. We do not really need this, but it could be really useful to enhance the robustness of the program. Let's see if we want to do it.
+
 === Graphical interface ===
+
+See GrpahicalInterface wiki page for implementation details and discussion.
 
 === Debug interface ====
 
- I would use a simple text file connected stream to report errors, assigning a type of error.
+ I would use a simple [text file connected] stream to report errors, assigning a type of error.
+
 {{{
  class TErrorHandler
    TErrorHandler // Init with output stream or filename. Some default choice also needed. 
    SetStream // Set output stream
    SetFileNmae // Create new output stream connected to a given file (create it if necessary)
-   Debug(TMsgType t, string message) // report message of a given type as specified by the following enum
+   Debug(TMsgType, string) // report message of a given type as specified by the following enum. Have to write the type of error, the timestamp and the message.
    enum TMsgType = {TS_INFO, TS_WARNING, TS_ERROR, TS_DEBUG_L1, TS_DEBUG_L2, TS_DEBUG_L3} // define the type of messages that can be delivered to the class.
-      TS_INFO: general informations
-      TS_WARNING: general warnings
-      TS_ERROR: error condition detected
-      TS_DEBUG_LX: debug informations divide into 3 levels of depth
+      // TS_INFO: general informations
+      // TS_WARNING: general warnings
+      // TS_ERROR: error condition detected
+      // TS_DEBUG_LX: debug informations divide into 3 levels of depth
    ~TErrorHandler //Close output stream
 }}}
+
+
+== Input interface ==
+
 == External resources ==
 
 The following external resources will be used in this project for implementing the interface outlined in the previous sections:
 
    * opengl
    * gtkmm
-   * gtkglextmm
+
+= Data interface =
+ Needed to store and retrieved different kind of informations. We'll use it to get things like images for the graphics library as well as game-related settings and status. This is needed because of the complexity of the information stored in an adventure game. Absolutely needed if we want to be able to expand it in a strategic game also in the future.
