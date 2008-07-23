@@ -32,7 +32,7 @@ Author: M. Antonelli, S. Pagan Griso
 
  This section covers both graphical, text[, socket] and debug output, as well as keyboard/mouse inputs.
  A set of classes to wrap the details of the particular implementation. In my mind at the moment we need a quite high-level interface.
- I would put in this section all the classes that we use to display something, from the game from/to the _user_ (can also be another !TombSeller program in the future for LAN parties, will be just the graphical interface plus debug information in the beginnng).
+ I would put in this section all the classes that we use to display something, from the game from/to the _user_ (can also be another !TombSeller program in the future for LAN parties, will be just the graphical interface plus debug information in the beginng).
  We need to specify in this section the guidelines for this interface in order to decide exactly at which level we want to put it; i would also specify the external resources and some detail of the current implementation of these interfaces (for this project it's useless to divide the interface and the implementations in different directories).
 
 == Interface design ==
@@ -45,7 +45,7 @@ See GrpahicalInterface wiki page for implementation details and discussion.
 
 === Debug interface ====
 
- I would use a simple [text file connected] stream to report errors, assigning a type of error.
+ I would use a simple (text file connected) stream to report errors, assigning a type of error.
 
 {{{
  class TErrorHandler
