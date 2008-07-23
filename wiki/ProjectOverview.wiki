@@ -26,6 +26,7 @@ We need a general structure that allows us to go step by step, giving always the
 === Debug interface ====
 
  I would use a simple text file connected stream to report errors, assigning a type of error.
+{{{
  class TErrorHandler
    TErrorHandler: Init with output stream or filename. Some default choice also needed.
    SetStream: Set output stream
@@ -36,7 +37,7 @@ We need a general structure that allows us to go step by step, giving always the
    TS_WARNING: general warnings
    TS_ERROR: error condition detected
    TS_DEBUG_LX: debug informations divide into 3 levels of depth
-
+}}}
 == External resources ==
 
 The following external resources will be used in this project for implementing the interface outlined in the previous sections:
