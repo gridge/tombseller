@@ -12,6 +12,7 @@
    * I/O interface
    * Data interface
    * Objects
+   * !TimeParser
 
  The guideline is that each (main) section corresponds roughly to one working directory.
 
@@ -37,8 +38,6 @@ Author: M. Antonelli, S. Pagan Griso
  We need to specify in this section the guidelines for this interface in order to decide exactly at which level we want to put it; i would also specify the external resources and some detail of the current implementation of these interfaces (for this project it's useless to divide the interface and the implementations in different directories).
 
 == Interface design ==
-
- Here we need a simple common _message handler_ to be able to enqueue commands and requests, as well as to store inputs until the program is ready to get them. We do not really need this, but it could be really useful to enhance the robustness of the program. Let's see if we want to do it.
 
 === Graphical interface ===
 
@@ -84,3 +83,9 @@ The following external resources will be used in this project for implementing t
  Collection of classes defining the different (meta-)physical objects we need. From a generic object in the graphic adventure (then specialized in things like a chair) to a wallet for the strategic part. This will be one the core parts of the project. Need a lot of development here.
 
  See ObjectDefinitions wiki for details.
+
+
+= !TimeParser =
+
+ This should be the core of the program.
+ Here we need to be able to decide the _flow_ of the program. When to look at I/O interface for input/output, when to take special actions and whatever the real program needs. Could also think in creating a separate time-activated action handler (for schedule things to happen in a given amount of time, but this will be an implementation detail..).
