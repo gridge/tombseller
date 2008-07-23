@@ -28,15 +28,16 @@ We need a general structure that allows us to go step by step, giving always the
  I would use a simple text file connected stream to report errors, assigning a type of error.
 {{{
  class TErrorHandler
-   TErrorHandler: Init with output stream or filename. Some default choice also needed.
-   SetStream: Set output stream
-   SetFileNmae: Create new output stream connected to a given file (create it if necessary)
-   Debug(TMsgType t, string message): report message of a given type as specified by the following enum
-   enum TMsgType = {TS_INFO, TS_WARNING, TS_ERROR, TS_DEBUG_L1, TS_DEBUG_L2, TS_DEBUG_L3}: define the type of messages that can be delivered to the class.
-   TS_INFO: general informations
-   TS_WARNING: general warnings
-   TS_ERROR: error condition detected
-   TS_DEBUG_LX: debug informations divide into 3 levels of depth
+   TErrorHandler // Init with output stream or filename. Some default choice also needed. 
+   SetStream // Set output stream
+   SetFileNmae // Create new output stream connected to a given file (create it if necessary)
+   Debug(TMsgType t, string message) // report message of a given type as specified by the following enum
+   enum TMsgType = {TS_INFO, TS_WARNING, TS_ERROR, TS_DEBUG_L1, TS_DEBUG_L2, TS_DEBUG_L3} // define the type of messages that can be delivered to the class.
+      TS_INFO: general informations
+      TS_WARNING: general warnings
+      TS_ERROR: error condition detected
+      TS_DEBUG_LX: debug informations divide into 3 levels of depth
+   ~TErrorHandler //Close output stream
 }}}
 == External resources ==
 
