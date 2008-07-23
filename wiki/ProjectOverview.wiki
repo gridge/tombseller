@@ -12,10 +12,13 @@
    * I/O interface
    * Data interface
    * Objects
-   * !TimeParser
+   * Main program
 
  The guideline is that each (main) section corresponds roughly to one working directory.
 
+ In particular this could be our directory structure:
+
+   * TODO :-P
 
 = C++ Header =
 
@@ -85,7 +88,7 @@ The following external resources will be used in this project for implementing t
  See ObjectDefinitions wiki for details.
 
 
-= !TimeParser =
+= Main program =
 
  This should be the core of the program.
  Here we need to be able to decide the _flow_ of the program. When to look at I/O interface for input/output, when to take special actions and whatever the real program needs. Could also think in creating a separate time-activated action handler (for schedule things to happen in a given amount of time, but this will be an implementation detail..).
