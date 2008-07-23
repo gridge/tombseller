@@ -75,3 +75,5 @@ The following external resources will be used in this project for implementing t
  Needed to store and retrieved different kind of informations. We'll use it to get things like images for the graphics library as well as game-related settings and status. This is needed because of the complexity of the information stored in an adventure game. Absolutely needed if we want to be able to expand it in a strategic game also in the future. 
 
  We could use a DB-based storage for some kind of informations or simply serialize them. Anyway we need an interface to do that (i.e. to retrieve the different type of informations) so that we can easily switch the output mechanism in the future and start with a simple one.
+
+ We can start with a skeleton of this interface and then add members as long as we need different data types or access methods.  
