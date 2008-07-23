@@ -1,0 +1,12 @@
+#Definition and behavior of objects in the game
+
+= Introduction =
+
+We need to classify the different kind of objects, and then implement each one as soon as we need it.
+
+ Ex. We could define an _object_ in the graphic adventure that can potentially _do_ some actions (enabled in a specific implementation) and has some image/position stored.
+
+= Details =
+
+ Different class of objects needed:
+   * 
