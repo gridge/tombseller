@@ -45,3 +45,4 @@ The following external resources will be used in this project for implementing t
 
    * opengl
    * gtkmm
+   * gtkglextmm
