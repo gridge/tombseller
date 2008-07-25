@@ -36,11 +36,13 @@ Special Notes:
 }}}
 
 == Bash style header ==
+{{{
 # Nomefile
 # Project: tombseller
 # Comment
 # Authors: M. Antonelli, S. Pagan Griso
 # Special Notes:
+}}}
 
 = I/O Interface =
 
