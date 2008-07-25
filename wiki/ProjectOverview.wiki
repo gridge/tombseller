@@ -22,7 +22,8 @@
 
 = Headers =
 
-Just a nice try... feel free to change it :)
+Just a nice try... feel free to change it :) <br/>
+Field without the ':' are meant to be replaced, fields with the trailing ':' are supposed to be filled.
 
 == C++ Header ==
 {{{
