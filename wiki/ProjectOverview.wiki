@@ -20,18 +20,27 @@
 
    * TODO :-P
 
-= C++ Header =
+= Headers =
 
 Just a nice try... feel free to change it :)
 
+== C++ Header ==
 {{{
 /* NomeFile
+Project: tombseller
 Comment:
-Author: M. Antonelli, S. Pagan Griso
+Authors: M. Antonelli, S. Pagan Griso
+Special Notes:
 /*
 
 }}}
 
+== Bash style header ==
+# Nomefile
+# Project: tombseller
+# Comment
+# Authors: M. Antonelli, S. Pagan Griso
+# Special Notes:
 
 = I/O Interface =
 
