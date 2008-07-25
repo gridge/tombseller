@@ -28,8 +28,9 @@ Just a nice try... feel free to change it :)
 {{{
 /* NomeFile
 Project: tombseller
-Comment:
+Comment
 Authors: M. Antonelli, S. Pagan Griso
+Description:
 Special Notes:
 /*
 
@@ -41,6 +42,7 @@ Special Notes:
 # Project: tombseller
 # Comment
 # Authors: M. Antonelli, S. Pagan Griso
+# Description:
 # Special Notes:
 }}}
 
