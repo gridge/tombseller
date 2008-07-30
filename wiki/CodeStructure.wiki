@@ -1,0 +1,12 @@
+#labels Phase-Design
+#Wiki describing code structure
+
+= Introduction =
+
+This page describes the structure of the code in a but more detail.
+
+Refer to this page to become an active developer!
+
+= Details =
+
+ The directory structure is the following:
