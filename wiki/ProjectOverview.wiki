@@ -18,8 +18,12 @@
 
  In particular this could be our directory structure:
 
-   * TODO :-P
+   * iomanager: libraries for I/O at user-level, including graphics
+   * datamanager: libraries for I/O of permanent data
+   * objects: Game classes
+   * main: Main program and handling functions
 
+ A discussion of the Makefile structure can be found [http://code.google.com/p/tombseller/wiki/CodeStructure here].
 = Headers =
 
 Just a nice try... feel free to change it :)
