@@ -40,10 +40,14 @@ We need to classify the different kind of objects, and then implement each one a
    * objects triggering _actions_
 
 
-== Strategic world ==
+== Strategic world (!StWorld) ==
  This is another world gathering all strategic part of the game. Includes everything you can imagine... and will be defined in the future :p
 
 = Details =
 
  Different class of objects needed:
-   * 
+   * TCalendar: keeps track of the super-world clock (common to !AdWorld and !StWorld)
+   * TStaticObject: inspite of the name can contain animation. Basic class for the objects as defined before.
+   * TManInTheWorld: Jeff basic class. Can be used to extend to multi-players in the future.
+   * TAdWorld: Graphic adventure container to handle all interactions as defined in the Interaction section above.
+   * TStWorld: Strategic adventure container. Could think to have pointers to current instances of TAdWorld and vice-versa for easy (but dangerous) interaction.
