@@ -9,7 +9,7 @@ We need to classify the different kind of objects, and then implement each one a
 = General thoughts =
  Here we put general requirements that we need to satisfy.
 
-== Adventure World (AdWorld) ==
+== Adventure World (!AdWorld) ==
 
    * We need a timer and a connected calendar. We have cycles of weeks, and each day is divided in day, evening, night.
    * Gestione della connessione causale di eventi (o la smolliamo agli oggetti?)
