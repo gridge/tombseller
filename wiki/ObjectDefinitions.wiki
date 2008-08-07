@@ -9,7 +9,7 @@ We need to classify the different kind of objects, and then implement each one a
 = General thoughts =
  Here we put general requirements that we need to satisfy.
 
-== World ==
+== Adventure World (AdWorld) ==
 
    * We need a timer and a connected calendar. We have cycles of weeks, and each day is divided in day, evening, night.
    * Gestione della connessione causale di eventi (o la smolliamo agli oggetti?)
@@ -19,7 +19,29 @@ We need to classify the different kind of objects, and then implement each one a
 == Jeff ==
    * Porta-oggetti
    * Soldi
+
+== "Statics" Objects ==
+ Referred in the following as _objects_. They are everything that can be placed on a scenario and can be interactive by the user (Jeff). 
+
+== actions ==
+
+ This is everything is happening, includes:
+   * a sequence starts (like a movie..)
+   * a sequence of pre-defined changes to objects/scenario properties
+   * changes in the strategic world
   
+== Interactions ==
+ This is one of the most complex design issues. _How to make everything interact?_
+
+ We need:
+   * objects interacting with other objects
+   * objects interacting with scenarios (and vice-versa)
+   * clock interacting with objects and scenarios
+   * objects triggering _actions_
+
+
+== Strategic world ==
+ This is another world gathering all strategic part of the game. Includes everything you can imagine... and will be defined in the future :p
 
 = Details =
 
