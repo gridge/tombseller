@@ -23,7 +23,20 @@ We need to classify the different kind of objects, and then implement each one a
 == "Static" Objects ==
  Referred in the following as _objects_. They are everything that can be placed on a scenario and can be interactive by the user (Jeff). 
 
-== actions ==
+   * Can be in multiple satates
+      * hidden
+      * other specifc-states
+   * Should be able to contain various graphical rapresentation:
+       * small picture
+       * big multiple states
+       * animations
+
+== Scenarios ==
+  Consists in the "ambient" where the Ad part will take place. In my mind:
+   * Have to contain a set of objects in predefined places (also multiple).
+   * Multiple representations depending on world settings, like time.
+
+== Actions ==
 
  This is everything is happening, includes:
    * a sequence starts (like a movie..)
@@ -51,3 +64,4 @@ We need to classify the different kind of objects, and then implement each one a
    * TManInTheWorld: Jeff basic class. Can be used to extend to multi-players in the future.
    * TAdWorld: Graphic adventure container to handle all interactions as defined in the Interaction section above.
    * TStWorld: Strategic adventure container. Could think to have pointers to current instances of TAdWorld and vice-versa for easy (but dangerous) interaction.
+   * TScenario: scenario base class.
