@@ -24,6 +24,7 @@
    * main: Main program and handling functions
 
  A discussion of the Makefile structure can be found [http://code.google.com/p/tombseller/wiki/CodeStructure here].
+
 = Headers =
 
 Just a nice try... feel free to change it :)
@@ -104,7 +105,7 @@ The following external resources will be used in this project for implementing t
 = Objects =
  Collection of classes defining the different (meta-)physical objects we need. From a generic object in the graphic adventure (then specialized in things like a chair) to a wallet for the strategic part. This will be one the core parts of the project. Need a lot of development here.
 
- See ObjectDefinitions wiki for details.
+ See [http://code.google.com/p/tombseller/wiki/ObjectDefinitions ObjectDefinitions] wiki for details.
 
 
 = Main program =
