@@ -12,13 +12,13 @@ We need to classify the different kind of objects, and then implement each one a
 == Adventure World (!AdWorld) ==
 
    * We need a timer and a connected calendar. We have cycles of weeks, and each day is divided in day, evening, night.
-   * Gestione della connessione causale di eventi (o la smolliamo agli oggetti?)
-   * Gestione cambi di scena e filmati
+   * Handling of causal connection of the events (could also be handled by objects, but less powerful)
+   * Handling change of scenarios and movies
 
 
 == Jeff ==
-   * Porta-oggetti
-   * Soldi
+   * Containers for objects
+   * Money (special object? sure!)
 
 == "Static" Objects ==
  Referred in the following as _objects_. They are everything that can be placed on a scenario and can be interactive by the user (Jeff). 
