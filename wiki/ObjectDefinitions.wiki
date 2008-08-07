@@ -20,7 +20,7 @@ We need to classify the different kind of objects, and then implement each one a
    * Porta-oggetti
    * Soldi
 
-== "Statics" Objects ==
+== "Static" Objects ==
  Referred in the following as _objects_. They are everything that can be placed on a scenario and can be interactive by the user (Jeff). 
 
 == actions ==
