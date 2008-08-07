@@ -6,6 +6,21 @@ We need to classify the different kind of objects, and then implement each one a
 
  Ex. We could define an _object_ in the graphic adventure that can potentially _do_ some actions (enabled in a specific implementation) and has some image/position stored.
 
+= General thoughts =
+ Here we put general requirements that we need to satisfy.
+
+== World ==
+
+   * We need a timer and a connected calendar. We have cycles of weeks, and each day is divided in day, evening, night.
+   * Gestione della connessione causale di eventi (o la smolliamo agli oggetti?)
+   * Gestione cambi di scena e filmati
+
+
+== Jeff ==
+   * Porta-oggetti
+   * Soldi
+  
+
 = Details =
 
  Different class of objects needed:
